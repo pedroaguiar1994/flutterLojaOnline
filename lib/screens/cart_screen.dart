@@ -27,7 +27,7 @@ class CartScreen extends StatelessWidget {
                 int p = model.products.length;
                 return Text(
                   "${p ?? 0} ${p == 1 ?"ITEM": "ITENS"}",
-                  style: TextStyle(fontSize:17.0 ),
+                  style: TextStyle(fontSize:18.0 ),
                 );
               },
             ),
