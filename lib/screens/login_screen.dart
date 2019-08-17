@@ -102,6 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
            SizedBox(
              height: 44.0,
              child:  RaisedButton(
+              
               child: Text("Entrar",
                 style: TextStyle(
                   fontSize: 19.0,
@@ -111,7 +112,6 @@ class _LoginScreenState extends State<LoginScreen> {
               color: Theme.of(context).primaryColor,
               onPressed: (){
                 if(_formkey.currentState.validate()){
-
                 }
                 model.signIn(
                   email: _emailController.text,

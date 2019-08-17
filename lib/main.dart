@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget{
             child: MaterialApp(
           title: "Flutter´s Clothing",
           theme: ThemeData(
-            primarySwatch: Colors.orange,
+            primarySwatch: Colors.blue,
             primaryColor: Color.fromARGB(255, 255, 127, 0)
           ),
           debugShowCheckedModeBanner: false,

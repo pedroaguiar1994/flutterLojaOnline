@@ -18,14 +18,7 @@ class CustomDrawer extends StatelessWidget {
 
     Widget _buildDrawerBack() => Container(
       decoration: BoxDecoration(
-          gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 150,200, 200),
-                Colors.orange
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter
-          )
+          color: Colors.blue[200]
       ),
     );
 
@@ -58,6 +51,7 @@ class CustomDrawer extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text("Ola,${!model.isLoggedIn() ? "" : model.userData["name"]}",
+                          
                           style: TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold, color: Colors.white                      
@@ -69,9 +63,9 @@ class CustomDrawer extends StatelessWidget {
                             "Entre ou cadastra-se "
                             :"Sair",
                             style: TextStyle(
-                              color: Theme.of(context).primaryColor,
+                             color: Colors.white,
                               fontSize: 16.0,
-                              fontWeight: FontWeight.bold, 
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           onTap:(){
@@ -92,11 +86,12 @@ class CustomDrawer extends StatelessWidget {
                 ),
               ),
               Divider(),
-              DrawerTile(Icons.home, 'Inicio',pageController,0),
+              DrawerTile(Icons.home, 'Minha Pagina',pageController,0),
               DrawerTile(Icons.list, 'Produtos',pageController,1),
               DrawerTile(Icons.location_on, 'Localizaçao das Lojas',pageController,2),
               DrawerTile(Icons.playlist_add_check, 'Meus Pedidos',pageController,3),
-              DrawerTile(Icons.settings,'Ajustes', pageController,4)
+              DrawerTile(Icons.favorite,'Favoritos', pageController,4),
+              DrawerTile(Icons.settings, 'Configuraçoes', pageController,5)
             ] ,
           )
         ],

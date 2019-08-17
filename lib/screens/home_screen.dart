@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:loja_informatica/tabs/favorites_tab.dart';
 import 'package:loja_informatica/tabs/home_tab.dart';
 import 'package:loja_informatica/tabs/orders_tab.dart';
+import 'package:loja_informatica/tabs/places_tab.dart';
 import 'package:loja_informatica/tabs/products_tab.dart';
+import 'package:loja_informatica/tabs/settings_tab.dart';
 import 'package:loja_informatica/widgets/cart_button.dart';
 import 'package:loja_informatica/widgets/custom_drawer.dart';
 
@@ -29,7 +32,14 @@ class HomeScreen extends StatelessWidget {
           body: ProductsTab(),
           floatingActionButton: CartButton(),
         ),
-        Container(color: Colors.yellow,),
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Lojas"),
+            centerTitle: true,
+          ),
+          body: PlacesTab(),
+          drawer: CustomDrawer(_pageController),
+        ),
         Scaffold(
           appBar: AppBar(
             title: Text("Meus Pedidos"),
@@ -37,7 +47,24 @@ class HomeScreen extends StatelessWidget {
           ),
           body: OrdersTab(),
           drawer: CustomDrawer(_pageController),
-        )
+        ),
+         Scaffold(
+          appBar: AppBar(
+            title: Text("Favoritos"),
+            centerTitle: true,
+          ),
+          body: FavoritesTab(),
+          drawer: CustomDrawer(_pageController),
+        ),
+         Scaffold(
+          appBar: AppBar(
+            title: Text("Ajustes"),
+            centerTitle: true,
+          ),
+          body: SettingsTab(),
+          drawer: CustomDrawer(_pageController),
+        ),
+
       ],
     );
   }

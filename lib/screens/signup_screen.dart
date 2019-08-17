@@ -27,6 +27,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
      return Scaffold(
        key: _scaffoldkey,
       appBar: AppBar(
+        backgroundColor: Colors.blue[200],
         title: Text("Criar Conta"),
         centerTitle: true,   
       ),
