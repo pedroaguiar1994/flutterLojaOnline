@@ -46,7 +46,7 @@ class CustomDrawer extends StatelessWidget {
                       top: 8.0,
                       left: 0.0,
                       child: Text("Tech Tudo\n Express",
-                        style: TextStyle(fontSize:34.0,fontWeight: FontWeight.bold ),
+                        style: TextStyle(fontSize:34.0,fontWeight: FontWeight.bold , color: Colors.white),
                       ),
                     ),
                     Positioned(
@@ -60,7 +60,7 @@ class CustomDrawer extends StatelessWidget {
                           Text("Ola,${!model.isLoggedIn() ? "" : model.userData["name"]}",
                           style: TextStyle(
                             fontSize: 18.0,
-                            fontWeight: FontWeight.bold                        
+                            fontWeight: FontWeight.bold, color: Colors.white                      
                           ),
                           ),
                           GestureDetector(
@@ -71,7 +71,7 @@ class CustomDrawer extends StatelessWidget {
                             style: TextStyle(
                               color: Theme.of(context).primaryColor,
                               fontSize: 16.0,
-                              fontWeight: FontWeight.bold
+                              fontWeight: FontWeight.bold, 
                             ),
                           ),
                           onTap:(){
@@ -96,6 +96,7 @@ class CustomDrawer extends StatelessWidget {
               DrawerTile(Icons.list, 'Produtos',pageController,1),
               DrawerTile(Icons.location_on, 'Localizaçao das Lojas',pageController,2),
               DrawerTile(Icons.playlist_add_check, 'Meus Pedidos',pageController,3),
+              DrawerTile(Icons.settings,'Ajustes', pageController,4)
             ] ,
           )
         ],
