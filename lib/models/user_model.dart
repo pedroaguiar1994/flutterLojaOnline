@@ -60,7 +60,8 @@ class UserModel extends Model {
     isLoading = true;
     notifyListeners();
 
-    _auth.signInWithEmailAndPassword(email: email, password: pass).then(
+ //* FirebaseUser newUser = await 
+  _auth.signInWithEmailAndPassword(email: email, password: pass).then(
       (user) async {
         firebaseUser = user;
 
