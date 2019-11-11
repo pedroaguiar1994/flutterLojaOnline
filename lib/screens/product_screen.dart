@@ -140,7 +140,7 @@ class _ProductScreenState extends State<ProductScreen> {
                         );
                       }
                     }: null,
-                    child: Text(UserModel.of(context).isLoggedIn() ? "Adicionar ao carrinho"
+                    child: Text(UserModel.of(context).isLoggedIn() ? "Comprar"
                     :"Entre para comprar",
                     style: TextStyle(fontSize: 18.0),
                     ),

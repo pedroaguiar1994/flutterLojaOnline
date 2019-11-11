@@ -6,6 +6,7 @@ import 'package:loja_informatica/screens/order_screen.dart';
 import 'package:loja_informatica/tiles/cart_tile.dart';
 import 'package:loja_informatica/widgets/cart_price.dart';
 import 'package:loja_informatica/widgets/discount_card.dart';
+import 'package:loja_informatica/widgets/pagamento.dart';
 import 'package:loja_informatica/widgets/ship_card.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -86,6 +87,16 @@ class CartScreen extends StatelessWidget {
                   ),
                   DiscountCard(),
                   ShipCard(),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Formas de Pagamento",
+                      style: TextStyle(fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                        color: Colors.lightGreen
+                      ),
+                    ),
+                  ),
+                  Pagamentocard(),
                   CartPrice(() async{
                     String orderId =  await model.finishOrder();
                     if(orderId != null)
@@ -93,6 +104,7 @@ class CartScreen extends StatelessWidget {
                         MaterialPageRoute(builder: (context) =>OrderScreen(orderId))
                       );
                   }),
+
                 ],
               );
             }

@@ -13,7 +13,7 @@ class DiscountCard extends StatelessWidget {
           textAlign: TextAlign.start,
           style: TextStyle(
             fontWeight: FontWeight.w600,
-            color: Colors.orange[700]
+            color: Colors.green
 
           ),
         ),

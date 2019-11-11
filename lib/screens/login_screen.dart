@@ -56,8 +56,14 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               keyboardType: TextInputType.emailAddress,
               validator: (text){
-                if(text.isEmpty || !text.contains("@")) return "E-mail invalido";   
-              },
+                Pattern pattern =
+                    r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+                RegExp regex = new RegExp(pattern);
+                if (!regex.hasMatch(text))
+                  return 'Verifique se o seu endereço de email é válido';
+                else
+                  return null;
+                },
             ),
             SizedBox(height: 16.0,),
               TextFormField(
@@ -67,7 +73,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               obscureText: true,
               validator: (text){
-                if(text.isEmpty || text.length < 6) return "Digite uma senha valida";
+                if (text.isEmpty) {
+                  return "O campo da senha não pode estar vazio";
+                } else if (text.length < 6) {
+                  return "A senha deve ter pelo menos 6 caracteres";
+                }
+                return null;
               },
             ),
             Align(

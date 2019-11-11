@@ -39,7 +39,7 @@ class UserModel extends Model {
         email: userData["email"],
         password: pass
     ).then((user) async {
-      firebaseUser = user;
+     firebaseUser = user;  // arrumar o codigo para o login
 
       await _saveUserData(userData);
 
@@ -60,10 +60,10 @@ class UserModel extends Model {
     isLoading = true;
     notifyListeners();
 
- //* FirebaseUser newUser = await 
+  FirebaseUser newUser = await 
   _auth.signInWithEmailAndPassword(email: email, password: pass).then(
       (user) async {
-        firebaseUser = user;
+       firebaseUser = user;
 
         await _loadCurrentUser();
 
