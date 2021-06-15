@@ -28,7 +28,7 @@ dependencies:
   cloud_firestore: ^0.12.9
   carousel_pro: ^1.0.0
   transparent_image: ^1.0.0
-  scoped_model: ^1.0.1
+  scoped_model: ^1.1.0
   firebase_auth: ^0.11.1+12
   url_launcher: ^5.1.1
   path_provider: ^0.4.1
@@ -41,6 +41,7 @@ dependencies:
 
 
 dev_dependencies:
+  integration_test:
   flutter_test:
     sdk: flutter
 
