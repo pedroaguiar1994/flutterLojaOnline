@@ -9,19 +9,17 @@ import 'package:loja_informatica/widgets/cart_button.dart';
 import 'package:loja_informatica/widgets/custom_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
-
-
   final _pageController = PageController();
   @override
   Widget build(BuildContext context) {
     return PageView(
-      controller:_pageController ,
+      controller: _pageController,
       physics: NeverScrollableScrollPhysics(),
       children: <Widget>[
         Scaffold(
-          body:HomeTab(),
+          body: HomeTab(),
           drawer: CustomDrawer(_pageController),
-          floatingActionButton: CartButton() ,
+          floatingActionButton: CartButton(),
         ),
         Scaffold(
           appBar: AppBar(
@@ -48,23 +46,22 @@ class HomeScreen extends StatelessWidget {
           body: OrdersTab(),
           drawer: CustomDrawer(_pageController),
         ),
-         Scaffold(
-          appBar: AppBar(
-            title: Text("Favoritos"),
-            centerTitle: true,
-          ),
-          body: FavoritesTab(),
-          drawer: CustomDrawer(_pageController),
-        ),
-         Scaffold(
-          appBar: AppBar(
-            title: Text("Ajustes"),
-            centerTitle: true,
-          ),
-          body: SettingsTab(),
-          drawer: CustomDrawer(_pageController),
-        ),
-
+        //  Scaffold(
+        //   appBar: AppBar(
+        //     title: Text("Favoritos"),
+        //     centerTitle: true,
+        //   ),
+        //   body: FavoritesTab(),
+        //   drawer: CustomDrawer(_pageController),
+        // ),
+        //  Scaffold(
+        //   appBar: AppBar(
+        //     title: Text("Ajustes"),
+        //     centerTitle: true,
+        //   ),
+        //  body: SettingsTab(),
+        //   drawer: CustomDrawer(_pageController),
+        // ),
       ],
     );
   }
