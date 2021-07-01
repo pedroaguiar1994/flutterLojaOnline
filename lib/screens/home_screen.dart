@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:loja_informatica/tabs/favorites_tab.dart';
 import 'package:loja_informatica/tabs/home_tab.dart';
 import 'package:loja_informatica/tabs/orders_tab.dart';
 import 'package:loja_informatica/tabs/places_tab.dart';
@@ -46,22 +45,7 @@ class HomeScreen extends StatelessWidget {
           body: OrdersTab(),
           drawer: CustomDrawer(_pageController),
         ),
-        //  Scaffold(
-        //   appBar: AppBar(
-        //     title: Text("Favoritos"),
-        //     centerTitle: true,
-        //   ),
-        //   body: FavoritesTab(),
-        //   drawer: CustomDrawer(_pageController),
-        // ),
-        //  Scaffold(
-        //   appBar: AppBar(
-        //     title: Text("Ajustes"),
-        //     centerTitle: true,
-        //   ),
-        //  body: SettingsTab(),
-        //   drawer: CustomDrawer(_pageController),
-        // ),
+ 
       ],
     );
   }
