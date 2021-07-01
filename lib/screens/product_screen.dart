@@ -73,7 +73,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 ),
                 SizedBox(height: 16.0,),
                 Text(
-                  "Escolha a cor ",
+                  "Selecione o modelo",
                   style: TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.w700
